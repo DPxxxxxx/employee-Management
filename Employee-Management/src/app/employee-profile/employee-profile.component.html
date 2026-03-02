@@ -1,0 +1,19 @@
+<div class="profile-container" *ngIf="employee$ | async as emp">
+
+  <div class="profile-header">
+    <h2>{{ emp.name }}</h2>
+  </div>
+
+  <div class="profile-info">
+    <p><strong>ID:</strong> {{ emp.id }}</p>
+    <p><strong>Department:</strong> {{ emp.department }}</p>
+  </div>
+
+  <div class="profile-actions">
+    <input #deptInput type="text" placeholder="New Department" />
+    <button (click)="emp.changeDepartment(deptInput.value)">
+      Change Department
+    </button>
+  </div>
+
+</div>

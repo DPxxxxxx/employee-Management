@@ -1,0 +1,11 @@
+<h1>Employee Directory</h1>
+
+<input 
+  type="text" 
+  placeholder="Search by name..."
+  (input)="onSearch($event)" 
+/>
+
+<app-employee-list
+  [employees$]="filteredEmployees$">
+</app-employee-list>

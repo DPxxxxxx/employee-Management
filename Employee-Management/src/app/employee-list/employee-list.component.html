@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div 
+    class="card"
+    *ngFor="let emp of employees$ | async"
+    [routerLink]="['/employees', emp.id]"
+  >
+    <div class="avatar">
+      {{ emp.name.charAt(0) }}
+    </div>
+    <h3>{{ emp.name }}</h3>
+    <p>{{ emp.department }}</p>
+  </div>
+</div>
